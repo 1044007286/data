@@ -2953,8 +2953,8 @@ function addFieldsInit() {
         var storage = window.localStorage;
         storage.clear();
         storage.setItem('m',JSON.stringify(M));
-        console.log(JSON.stringify(M))
-        console.log(JSON.stringify(F))
+        // console.log(JSON.stringify(M))
+        // console.log(JSON.stringify(F))
         storage.setItem('f',JSON.stringify(F));
         // window.location = $(this).attr('href')
     });
