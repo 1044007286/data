@@ -56,7 +56,7 @@ DEFFLD = {
     },
     checkbox: {
         html: '<label class="desc"><span class="req hide"> *</span></label><div class="content"></div>',
-        json: '({LBL:"多选框",TYP:"checkbox",LAY:"one",REQD:"0",SCU:"pub",INSTR:"",CSS:"",ITMS:[{VAL:"选项 1",CHKED:"0"},{VAL:"选项 2",CHKED:"0"},{VAL:"选项 3",CHKED:"0"}]})',
+        json: '({LBL:"多选框",TYP:"checkbox",LAY:"oneByOne",REQD:"0",SCU:"pub",INSTR:"",CSS:"",ITMS:[{VAL:"选项 1",CHKED:"0"},{VAL:"选项 2",CHKED:"0"},{VAL:"选项 3",CHKED:"0"}]})',
         holder: '<li class="field prefocus" style="height:106px;width:97%"></li>'
     },
     goods: {
@@ -71,7 +71,7 @@ DEFFLD = {
     },
     radio: {
         html: '<label class="desc"><span class="req hide"> *</span></label><div class="content"></div>',
-        json: '({LBL:"单选框",TYP:"radio",LAY:"one",REQD:"0",OTHER:"0",RDM:"0",SCU:"pub",INSTR:"",CSS:"",ITMS:[{VAL:"选项 1",CHKED:"0"},{VAL:"选项 2",CHKED:"0"},{VAL:"选项 3",CHKED:"0"}]})',
+        json: '({LBL:"单选框",TYP:"radio",LAY:"oneByOne",REQD:"0",OTHER:"0",RDM:"0",SCU:"pub",INSTR:"",CSS:"",ITMS:[{VAL:"选项 1",CHKED:"0"},{VAL:"选项 2",CHKED:"0"},{VAL:"选项 3",CHKED:"0"}]})',
         holder: '<li class="field prefocus" style="height:106px;width:97%"></li>'
     },
     dropdown: {
