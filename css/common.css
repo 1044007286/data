@@ -69,7 +69,10 @@ padding:4px;
 input[type=button]{margin:6px 0px 2px 0px;padding:0px 10px;}
 input.larger{padding:5px 3px;font-size:14px;}
 
-select[disabled],input[disabled]{color:#999999;opacity:1;}
+div select[disabled],div input[disabled]{color:#999999;opacity:1;width: 100%;}
+div span input[disabled]{color:#999999;opacity:1;width: initial;}
+span.sinput{width: 30%; margin-right: 5px;display: inline-block;}
+span.sinput input{width: 80% !important; }
 .help{color:#b94a48;font-size:11px;font-family:"Arial";font-weight:bold;}
 /* 容器宽度 */
 #container,#header,#footer,#navmenu{
