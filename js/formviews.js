@@ -526,7 +526,7 @@ function createField(r, q, num) {
     }
     var h = $(DEFFLD.instruct);
     if (q.INSTR) {
-        r.append(DEFFLD.icon).append(l).find('label.desc').append(`<p style="color:#999;font-weight:400;margin:0;">${q.INSTR}</p>`)
+        r.append(DEFFLD.icon).append(l).find('label.desc').eq(0).append(`<p style="color:#999;font-weight:400;margin:0;">${q.INSTR}</p>`)
     }
     r.append(DEFFLD.icon).append(l).append(h).append(DEFFLD.fieldActions);
     if (isInstruct(q.TYP)) {
