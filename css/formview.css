@@ -267,7 +267,7 @@ input.selectfiles:hover {
     opacity: 0.9;
 }
 .oneline input, .center {
-    text-align: center;
+    /* text-align: center; */
 }
 .onelineLeft label {
     color: #999;
@@ -345,7 +345,7 @@ select {
     font-weight: bold;
 }
 .fieldInstruct {
-    width: 65% !important;
+    width: 100% !important;
 }
 .instruct {
     font-size: 95%;

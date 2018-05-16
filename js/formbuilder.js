@@ -22,7 +22,7 @@ secdescEditor,
 DEFFLD = {
     handle: '<div class="handle"><i title="拖动排序" class="iconfont move hide">&#xe63d;</i></div>',
     icon: '',
-    instruct: '<p class="instruct hide"></p>',
+    instruct: '<p class="instructs " style=" position:relative;margin:0;color:#999;font-weight:400;"></p>',
     fieldActions: '<div class="fieldActions hide"><i title="复制" href="#" class="iconfont faDup">&#xe60b;</i><i title="删除" href="#" class="iconfont faDel">&#xe619;</i></div>',
     field_li: '<li class="field default"></li>',
     item_checkbox: '<li><input name="CHKED" value="1" class="checkbox" type="checkbox" title="默认选中此项" /><input name="VAL" type="text" class="xs"/><a class="icononly-add iconfont icon-pos" title="添加一个新的选择项">&#xe60b;</a><a class="icononly-del iconfont icon-pos" title="删除此选择项">&#xe619;</a><a class="icononly-mov iconfont icon-pos" title="排序">&#xe63d;</a></li>',
@@ -266,7 +266,7 @@ function showProperties(c) {
     a = {
         text: [
             'ptype',
-            'pfldsize',
+            // 'pfldsize',
             'poptions',
             'popt_required',
             'popt_unique',
@@ -281,7 +281,7 @@ function showProperties(c) {
         ],
         number: [
             'ptype',
-            'pfldsize',
+            // 'pfldsize',
             'poptions',
             'popt_required',
             'popt_unique',
@@ -347,7 +347,7 @@ function showProperties(c) {
         ],
         dropdown: [
             'ptype',
-            'pfldsize',
+            // 'pfldsize',
             'poptions',
             'popt_required',
             'psecurity',
@@ -444,7 +444,7 @@ function showProperties(c) {
         ],
         url: [
             'ptype',
-            'pfldsize',
+            // 'pfldsize',
             'poptions',
             'popt_required',
             'popt_unique',
@@ -469,7 +469,7 @@ function showProperties(c) {
         ],
         email: [
             'ptype',
-            'pfldsize',
+            // 'pfldsize',
             'poptions',
             'popt_required',
             'popt_unique',
@@ -527,7 +527,7 @@ function preFocused(c, b) {
     }
     if (b !== 0 && IDX + 1 !== b) {
         $(c).removeClass('default').addClass('prefocus');
-        var a = $('p.instruct', c);
+        var a = $('p.instructs', c);
         if (a.html()) {
             a.hide().fadeIn()
         }
@@ -565,7 +565,7 @@ function setFocused(a, c) {
         $('#fbForm').removeClass('form-focused').addClass('form-default');
         d.removeClass('default prefocus').addClass('focused')
     }
-    var b = $('p.instruct', d);
+    var b = $('p.instructs', d);
     if (b.html()) {
         b.show()
     }
@@ -2525,7 +2525,7 @@ function propertyInit() {
         })
     },
     k = function (U) {
-        var W = $('#f' + IDX).find('p.instruct'),
+        var W = $('#f' + IDX).find('p.instructs'),
         V = $.trim($(U).val());
         W.text(V);
         if (V) {
@@ -3146,7 +3146,9 @@ function createField(r, q) {
     if (q.INSTR) {
         h.text(q.INSTR)
     }
-    r.append(DEFFLD.icon).append(l).append(h).append(DEFFLD.fieldActions);
+    console.log( )
+    r.append(DEFFLD.icon).append(l).find('label.desc').append(h)
+    r.append(DEFFLD.icon).append(l).append(DEFFLD.fieldActions);
     if (isInstruct(q.TYP)) {
         r.addClass('fieldInstruct')
     }
@@ -3189,7 +3191,7 @@ function createFields() {
 }
 function createForm() {
     $('#fTitle,#lblFormNm').text(M.FRMNM);
-    setTimeout(() => {
+    setTimeout(function() {
         $('#fDescription').html(M.DESC);
     }, 100);
     setFormValues(M)
@@ -3207,7 +3209,7 @@ function formInit() {
     });
     var d = function () {
         var e = $(this).val();
-        setTimeout(() => {
+        setTimeout(function() {
             $('#fDescription').html(M.DESC);
         }, 100);
         M.DESC = e;

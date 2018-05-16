@@ -526,7 +526,7 @@ function createField(r, q, num) {
     }
     var h = $(DEFFLD.instruct);
     if (q.INSTR) {
-        h.text(q.INSTR)
+        r.append(DEFFLD.icon).append(l).find('label.desc').append(`<p style="color:#999;font-weight:400;margin:0;">${q.INSTR}</p>`)
     }
     r.append(DEFFLD.icon).append(l).append(h).append(DEFFLD.fieldActions);
     if (isInstruct(q.TYP)) {
@@ -845,10 +845,10 @@ function initAuthCode() {
 function initInstruct() {
     $('#fields>li').bind({
         mouseover: function () {
-            $(this).find('p.instruct').removeClass('hide')
+            $(this).find('p.instructs').removeClass('hide')
         },
         mouseout: function () {
-            var a = $(this).find('p.instruct');
+            var a = $(this).find('p.instructs');
             if (!$('li').has(a).hasClass('focused')) {
                 a.addClass('hide')
             }
@@ -1001,8 +1001,8 @@ function highlight(d, b) {
     if (!a.hasClass('error')) {
         a.addClass('focused')
     }
-    $('p.instruct').addClass('hide');
-    a.find('p.instruct').removeClass('hide');
+    $('p.instructs').addClass('hide');
+    a.find('p.instructs').removeClass('hide');
     d.stopPropagation()
 }
 //初始化获取焦点 by Wilson
@@ -1016,10 +1016,10 @@ function initFocus() {
         $('[typ=\'file\']').click(function () {
             if (!$(this).hasClass('focused')) {
                 $('li.focused').removeClass('focused');
-                $('p.instruct').addClass('hide');
+                $('p.instructs').addClass('hide');
                 var a = $(this).attr('typ');
                 if (a != 'section' && a != 'html' && a != 'image' && a != 'goods') {
-                    $(this).addClass('focused').find('p.instruct').removeClass('hide').end().find(':input:eq(0)').focus()
+                    $(this).addClass('focused').find('p.instructs').removeClass('hide').end().find(':input:eq(0)').focus()
                 }
             }
         });
@@ -1038,10 +1038,10 @@ function initFocus() {
     $('#fields>li[id]').click(function () {
         if (!$(this).hasClass('focused')) {
             $('li.focused').removeClass('focused');
-            $('p.instruct').addClass('hide');
+            $('p.instructs').addClass('hide');
             var a = $(this).attr('typ');
             if (a != 'section' && a != 'html' && a != 'image' && a != 'goods') {
-                $(this).addClass('focused').find('p.instruct').removeClass('hide').end().find(':input:eq(0)').focus()
+                $(this).addClass('focused').find('p.instructs').removeClass('hide').end().find(':input:eq(0)').focus()
             }
         }
     })
