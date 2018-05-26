@@ -1,0 +1,14 @@
+{
+  "name": "datas",
+  "homepage": "https://github.com/1044007286/data",
+  "_release": "17f4961dc7",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "17f4961dc77c8f480be9608272bcdbbf8705940b"
+  },
+  "_source": "https://github.com/1044007286/data.git",
+  "_target": "*",
+  "_originalSource": "datas",
+  "_direct": true
+}

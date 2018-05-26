@@ -142,7 +142,7 @@ ul {
 }
 .s {
     box-sizing: border-box;
-    width: 30%;
+    width: 99%;
 }
 .m {
     box-sizing: border-box;
@@ -1152,6 +1152,9 @@ li.pc-submit {
 }
 @media (max-width: 768px) {
     .container{
+        width: 100%;
+    }
+    span.third{
         width: 100%;
     }
 }
